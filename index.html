@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Программирование на Java с нуля до гуру</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+  <script src="js/jquery.js"></script>
+
+  <script>
+    $(document).ready(function() {
+
+      var isAnimated = false;
+      $(".section__homework-block > .practice").on("click", function(e) {
+        e.preventDefault();
+        if(isAnimated === false) {
+          isAnimated = true;
+          if($(this).hasClass("open")) {
+
+            var par = $(this).parent();
+            $(".section__homework", par).hide(500);
+            $(this).removeClass("open");
+            setTimeout(function(){
+              isAnimated = false;
+            }, 500);
+          }
+          else {
+            isAnimated = true;
+            $(".section__homework").hide();
+            $(".section__homework-block > .practice").removeClass("open");
+            var par = $(this).parent();
+
+            $(".section__homework", par).show(500);
+
+            $(this).addClass("open");
+            setTimeout(function(){
+              isAnimated = false;
+            }, 500);
+          }
+        }
+
+      });
+
+    });
+
+  </script>
+
+
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <header>
+      <div class="wrap">
+        <div class="menu">
+          <div class="logo">
+            <img src="img/logo.png" alt="">
+          </div>
+          <ul>
+            <li>
+              <a target="_blank" href="https://srs.myrusakov.ru/list">Другие курсы</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://myrusakov.ru/">Мой сайт</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://blog.myrusakov.ru/">Мой блог</a>
+            </li>
+            <li>
+              <a target="_blank" href="https://support.myrusakov.ru/">Служба поддержки</a>
+            </li>
+          </ul>
+        </div>
+        <div class="header__block">
+          <div class="header__left">
+            <img src="img/java.jpg" alt="">
+            <p class="header__author">Автор: Михаил Русаков</p>
+            <h1><span>Программирование</span> <span>на Java</span> <span>с Нуля до Гуру</span></h1>
+          </div>
+          <div class="header__right">
+            <img src="img/men.png" alt="">
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <div class="content">
+    <div class="wrap">
+      <div class="content__section section">
+        <img src="img/section1.png" alt="">
+        <p class="section__number">Раздел 1.</p>
+        <p class="section__name">Введение</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1. <a target="_blank" href="lessons/Lesson_1_1/Lesson_1_1.mp4">Как проходить курс?</a>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2. <a target="_blank" href="lessons/Lesson_1_2/Lesson_1_2.mp4">Что такое Java?</a>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3. <a target="_blank" href="lessons/Lesson_1_3/Lesson_1_3.mp4">Установка среды разработки</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Установите NetBeans IDE.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section2.png" alt="">
+        <p class="section__number">Раздел 2.</p>
+        <p class="section__name">Основы программирования на Java</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_1/Lesson_2_1.mp4">Hello World</a>
+            <a class="source" href="files/sources/Lesson_2_1.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Выведите в консоль сообщение: «Привет, мир!».</p>
+                <p>2) Выведите в JOptionPane сообщение: «Я прохожу курс по Java!».</p>
+                <p>3) Запустите написанное приложение в командной строке, перед этим его в командной строке скомпилировав.</p>
+                <p>4) Создайте jar-файл и проверьте его работу.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_2/Lesson_2_2.mp4">Переменные и их типы</a>
+            <a class="source" href="files/sources/Lesson_2_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте строковую переменную со значением: «53.5»</p>
+                <p>2) Преобразуйте эту строковую переменную в переменную типа double</p>
+                <p>3) Выведите получившуюся переменную в консоль</p>
+                <p>4) Создайте переменную типа char, в которую поместите первую букву Вашего имени</p>
+                <p>5) Выведите её в консоль.</p>
+                <p>6) Создайте целую переменную с именем age и присвойте ей значение Вашего возраста.</p>
+                <p>7) Выведите её в консоль.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_3/Lesson_2_3.mp4">Арифметические операции</a>
+            <a class="source" href="files/sources/Lesson_2_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте две переменных типа double и присвойте им какие-нибудь значения.</p>
+                <p>2) Выполните с ними операции сложения, вычитания, умножения и деления.</p>
+                <p>3) Выполните операцию инкремента и декремента надо одной из переменных.</p>
+                <p>4) Выведите результат в консоль.</p>
+                <p>5) Прибавьте к первой переменной 5 и запишите результат в эту же переменную (полной записью и сокращённой).</p>
+                <p>6) Выведите результат в консоль.</p>
+                <p>7) Создайте целую переменную и присвойте ей значение 8.</p>
+                <p>8) Выведите остаток от деления на 3 в консоль.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_4/Lesson_2_4.mp4">Операции сравнения</a>
+            <a class="source" href="files/sources/Lesson_2_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте 2 переменных типа double с произвольными значениями.</p>
+                <p>2) Выведите в консоль следующие операции сравнения между ними: &gt;, &lt;, &gt;=, &lt;=, !=, ==</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 5.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_5/Lesson_2_5.mp4">Логические операции</a>
+            <a class="source" href="files/sources/Lesson_2_5.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте 3 переменных типа Boolean: true, false, false.</p>
+                <p>2) Сделайте логические выражения из 3-х переменных, чтобы:<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;А) Обязательно был && и в результате было true (решение в качестве примера: «true && !(false && false)» – только переменные подставляйте, а не значения).<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Б) Обязательно был || и в результате было false.<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;В) Обязательно был ^ и в результате было true.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 6.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_6/Lesson_2_6.mp4">Битовые операции</a>
+            <a class="source" href="files/sources/Lesson_2_6.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте две целых переменных (5 и 10).</p>
+                <p>2) Преобразуйте их в двоичный код и выведите их.</p>
+                <p>3) Выполните между ними следующие операции: &, |, ^.</p>
+                <p>4) С первой переменной сделайте ещё так же следующие операции: ~, &gt;&gt;1, &lt;&lt;1.</p>
+                <p><b>Примечание</b>: перед просмотром результатов побитовых операций обязательно рассчитайте его самостоятельно, а потом просто сравните с правильным.</p>
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 7.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_7/Lesson_2_7.mp4">Условный оператор</a>
+            <a class="source" href="files/sources/Lesson_2_7.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Используя JOptionPane, попросите пользователя ввести первое число.положительное число.</p>
+                <p>2) Если пользователь не ввёл ничего, то напишите ему об этом, используя JOptionPane.</p>
+                <p>3) Используя JOptionPane, попросите пользователя ввести второе число, отличное от 0.</p>
+                <p>4) Если пользователь не ввёл ничего, то напишите ему об этом, используя JOptionPane.</p>
+                <p>5) Если пользователь ввёл 0, то выведите в JOptionPane сообщение: «Результат: бесконечность».</p>
+                <p>6) Если пользователь ввёл не 0, то выведите через JOptionPane результат деления первого числа на второе.</p>
+                <p><b>Примечание</b>: Если пользователь ввёл некорректные данные (ничего не ввёл, либо какую-нибудь строку вместо числа), то завершайте программу.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 8.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_8/Lesson_2_8.mp4">Оператор цикла for</a>
+            <a class="source" href="files/sources/Lesson_2_8.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Попросите пользователя ввести положительное целое число через JOptionPane.</p>
+                <p>2) Обработайте некорректные данные (ничего не ввёл, отрицательное число, 0, не целое число), выведя соответствующие уведомления об ошибке.</p>
+                <p>3) Вычислите сумму всех чисел от 1 до числа, введённого пользователем, используя цикл for.</p>
+                <p>4) Выведите результат пользователю через JOptionPane.</p>
+                <p><b>Пример</b>: Пользователь ввёл 7, значит, надо вычислить сумму: 1+2+3+4+5+6+7=?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 9.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_2_9/Lesson_2_9.mp4">Оператор цикла while</a>
+            <a class="source" href="files/sources/Lesson_2_9.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Попросите пользователя ввести неотрицательно целое число через JOptionPane.</p>
+                <p>2) Обработайте некорректные данные (ничего не ввёл, отрицательное число, не целое число), выведя соответствующие уведомления об ошибке.</p>
+                <p>3) Вычислите факториал числа, введённого пользователем, используя цикл while.</p>
+                <p>4) Выведите результат пользователю через JOptionPane.</p>
+                <p><b>Примечание</b>: Факториал 0 = 1, факторил 1 = 1, факториал 2 = 1 * 2, факториал 3 = 1 * 2 * 3, факториал числа n = 1 * 2 * 3 * … * (n – 1) * n.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 10. <a target="_blank" href="lessons/Lesson_2_10/Lesson_2_10.mp4">Оператор цикла do-while</a>
+            <a class="source" href="files/sources/Lesson_2_10.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Используя бесконечный цикл do-while, заставьте пользователя ввести положительное целое число.</p>
+                <p><b>Примечание</b>: Если пользователь вводит что-то некорректное, то сообщайте ему об этом и просите снова ввести положительное целое число. И так до бесконечности, пока он не введёт правильный вариант.  Как только он вводит правильный вариант, выходите из цикла, и выводите JOptionPane с сообщением: «Спасибо!».</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 11. <a target="_blank" href="lessons/Lesson_2_11/Lesson_2_11.mp4">Оператор switch-case</a>
+            <a class="source" href="files/sources/Lesson_2_11.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Попросите пользователя ввести первое число через JOptionPane, а затем аналогично второе.</p>
+                <p>2) Попросите пользователя ввести одну из операций: «+», «-», «*», «/».</p>
+                <p>3) Используя switch-case выполните соответствующую операцию между двумя введёнными числами и выведите результат через JOptionPane.</p>
+                <p><b>Примечание</b>: При вводе некорректных данных выведите информацию об ошибке в консоль и завершите программу.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 12. <a target="_blank" href="lessons/Lesson_2_12/Lesson_2_12.mp4">Одномерные массивы</a>
+            <a class="source" href="files/sources/Lesson_2_12.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте массив из 5 чисел типа double.</p>
+                <p>2) Используя цикл while, выведите сумму всех чисел массива.</p>
+                <p>3) Используя цикл for, выведите произведение всех чисел массива.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 13. <a target="_blank" href="lessons/Lesson_2_13/Lesson_2_13.mp4">Многомерные массивы</a>
+            <a class="source" href="files/sources/Lesson_2_13.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте двумерный массив размера 2x3 целых чисел.</p>
+                <p>2) Используя цикл for, вычислите сумму всех чисел.</p>
+                <p>3) Создайте новый одномерный массив из двух элементов.</p>
+                <p>4) Используя цикл for, вычислите сумму каждой строки первого массива и запишите результат в новый массив.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section3.png" alt="">
+        <p class="section__number">Раздел 3.</p>
+        <p class="section__name">Объектно-ориентированное программирование в Java</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_1/Lesson_3_1.mp4">Что такое ООП?</a>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_2/Lesson_3_2.mp4">Создание класса</a>
+            <a class="source" href="files/sources/Lesson_3_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте класс User со следующими полями, подобрав правильный тип данных: id, логин, пароль.</p>
+                <p>2) Создайте конструктор класса User, приняв все 3 параметра для полей.</p>
+                <p>3) Присвойте полям полученные параметры.</p>
+                <p>4) Создайте два объекта класса User с различными входными параметрами.</p>
+                <p>5) Выведите в консоль все поля обоих объектов в следующем виде (можно с использованием массива и цикла): «id=5; логин=admin; password=abc»</p>
+                <p><b>Примечание</b>: id – это уникальный идентификатор. Он всегда является только целым положительным числом.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_3/Lesson_3_3.mp4">Методы и их перегрузка</a>
+            <a class="source" href="files/sources/Lesson_3_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Используя класс User из предыдущего упражнения, добавьте в нём методы get и set для всех полей.</p>
+                <p>2) Добавьте ещё один метод set для каждого поля (сделав, по сути, перегрузку методов), но уже без параметра. Внутри метода должно присваиваться значение по умолчанию (id = 0; login=”guest”; password=””).</p>
+                <p>3) Создайте объект класса User.</p>
+                <p>4) Воспользуйтесь методами set и get для установки новых значения для каждого поля и получения результат.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_4/Lesson_3_4.mp4">Модификаторы доступа</a>
+            <a class="source" href="files/sources/Lesson_3_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Сделайте все поля в классе User из предыдущего упражнения private.</p>
+                <p>2) Убедитесь, что доступа из основного класса к этим полям теперь нет (должна быть ошибка при попытке запустить программу).</p>
+                <p>3) Используйте метод set для установки нового логина у объекта User.</p>
+                <p>4) Используйте метод get для получения нового логина.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 5.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_5/Lesson_3_5.mp4">Статические поля и методы</a>
+            <a class="source" href="files/sources/Lesson_3_5.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте класс MyMath.</p>
+                <p>2) Создайте 4 статических метода в нём, которые будут возвращать соответствующие значения: add (сложение), sub (вычитание), mult (умножение) и div (деления).</p>
+                <p>3) Проверьте все 4 метода, выводя результат их работы в консоль.</p>
+                <p>4) Добавьте статическое private-поле в класс MyMath, в котором будет храниться количество вызовов статических методов.</p>
+                <p>5) Инкрементируйте статическое поле при каждом вызове метода.</p>
+                <p>6) Создайте статический метод get для этого счётчика.</p>
+                <p>7) Выведите в основной программе значение этого счётчика до вызова статических методов и после.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 6.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_6/Lesson_3_6.mp4">Наследование</a>
+            <a class="source" href="files/sources/Lesson_3_6.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте класс UserSocial – наследника класса User из предыдущих упражнений.</p>
+                <p>2) Добавьте в классе UserSocial поле с именем пользователя и его возрастом, сделав так же методы get и set, а также реализовав конструктор с пятью параметрами (id, логин, пароль, имя, возраст), в котором присвоить все значения полям, используя так же super().</p>
+                <p>3) Создайте класс WebMaster – наследника класса User.</p>
+                <p>4) Добавьте поле с адресом сайта, сделав так же методы get и set, плюс конструктор по аналогии со 2-м пунктом.</p>
+                <p>5) Создайте объект класса UserSocial и объект класса WebMaster.</p>
+                <p>6) Выведите у обоих объектов результат работы методов get и set, доставшиеся по наследству от User.</p>
+                <p>7) Выведите результат работы новых методов get и set у каждого из объектов.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 7.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_7/Lesson_3_7.mp4">Внутренние классы</a>
+            <a class="source" href="files/sources/Lesson_3_7.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+				<div class="section__homework">
+				  <p>1) Создайте класс MyLine.</p>
+				  <p>2) Создайте внутренний класс MyPoint с public-полями x и y.</p>
+				  <p>3) Добавьте public-поля pointStart, pointEnd, в которых будут храниться объекты класса Point.</p>
+				  <p>4) Создайте конструктор в классе MyLine, в котором должно быть 4 параметра: x и y начальной точки и x и y конечной точки.</p>
+				  <p>5) Внутри конструктора MyLine создайте на их основе два объекта Point и запишите их в соответствующие поля.</p>
+				  <p>6) Создайте объект класса MyLine.</p>
+				  <p>7) Выведите в основном классе в консоль координаты начальной и конечной точки в таком виде: «Начальная точка (5, 7); Конечная точка (10, 3);».</p>
+				</div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 8.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_8/Lesson_3_8.mp4">Абстрактные классы и методы</a>
+            <a class="source" href="files/sources/Lesson_3_8.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Сделайте абстрактным класс User из предыдущих упражнений, при этом WebMaster и UserSocial оставьте без изменений на данном этапе.</p>
+                <p>2) Добавьте в класс User абстрактный метод printUser() (public и без возвращаемого значения).</p>
+                <p>3) Убедитесь, что при запуске выдаётся ошибка и требование реализовать абстрактный метод в классах-наследниках.</p>
+                <p>4) Реализуйте printUser() в WebMaster и UserSocial, выведя в этом методе в консоль информацию о пользователе (в свободном стиле, но обязательно, чтобы все поля объекта были указаны).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 9.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_9/Lesson_3_9.mp4">Интерфейсы</a>
+            <a class="source" href="files/sources/Lesson_3_9.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте интерфейс PrintData, в котором укажите один метод: printUser().</p>
+                <p>2) Укажите этот интерфейс в классе User из предыдущего упражнения.</p>
+                <p>3) Убедитесь, что всё по-прежнему работает.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 10.&nbsp;&nbsp; <a target="_blank" href="lessons/Lesson_3_10/Lesson_3_10.mp4">Анонимные классы</a>
+            <a class="source" href="files/sources/Lesson_3_10.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте объект класса User, реализовав интерфейс PrintData из прошлого упражнения.</p>
+                <p>2) Вызовите у получившегося объекта метод printUser().</p>
+                <p><b>Примечание</b>: Поскольку класс User является абстрактным, необходимо будет воспользоваться анонимным классом.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 11. <a target="_blank" href="lessons/Lesson_3_11/Lesson_3_11.mp4">Обобщённые классы и методы</a>
+            <a class="source" href="files/sources/Lesson_3_11.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте класс Shop с обобщённым типом данных (один параметр).</p>
+                <p>2) Добавьте поле с массивом с обобщённым типом (то есть, это может быть, как массив целых чисел, так и массив из строк).</p>
+                <p>3) Создайте конструктор, принимающий этот массив и записывающий его в поле. Разумеется, метод принимать должен так же обобщённый тип данных.</p>
+                <p>4) Создайте метод printObject(), который выведет в консоль всё поле.</p>
+                <p>5) Создайте объект и запишите в него массив целых чисел (для примера, пусть это будут id товаров в магазине).</p>
+                <p>6) Создайте ещё один объект и запишите в него массив строк (для примера, пусть это будут названия товаров в магазине).</p>
+                <p>7) Вызовите у обоих объектов метод printObject().</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 12. <a target="_blank" href="lessons/Lesson_3_12/Lesson_3_12.mp4">Методы toString() и clone()</a>
+            <a class="source" href="files/sources/Lesson_3_12.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Добавьте в класс UserSocial и WebMaster методы toString() и clone(), реализовав при этом интерфейс Cloneable.</p>
+                <p>2) В методе toString() верните строку с информацией об объекте.</p>
+                <p>3) В методе clone() верните новый объект на основе клонируемого.</p>
+                <p>4) Создайте объекты обоих классов и воспользуйтесь у них методами toString, выведя объект в консоль, и clone(), выведя новый объект так же в консоль.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 13. <a target="_blank" href="lessons/Lesson_3_13/Lesson_3_13.mp4">Лямбда-выражения</a>
+            <a class="source" href="files/sources/Lesson_3_13.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте массив целых чисел, например, из 10 элементов.</p>
+                <p>2) Используя лямбда-выражение, отсортируйте массив по убыванию.</p>
+                <p>3) Выведите массив, используя цикл foreach.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 14. <a target="_blank" href="lessons/Lesson_3_14/Lesson_3_14.mp4">Рекурсия</a>
+            <a class="source" href="files/sources/Lesson_3_14.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Используя рекурсию, выведите все числа от 1 до 100.</p>
+                <p>2) Используя рекурсию, найдите сумм цифр произвольного целого числа (для примера, можете взять 1539).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section4.png" alt="">
+        <p class="section__number">Раздел 4.</p>
+        <p class="section__name">Исключения в Java</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1. <a target="_blank" href="lessons/Lesson_4_1/Lesson_4_1.mp4">Основы исключений</a>
+            <a class="source" href="files/sources/Lesson_4_1.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте массив целых чисел из 5 элементов.</p>
+                <p>2) Обратитесь к элементу с индексом 5.</p>
+                <p>3) Посмотрите, что за исключение выскакивает при работе программы.</p>
+                <p>4) Перехватите его с помощью try-catch и выведите в блоке catch в консоль уведомление об ошибке.</p>
+                <p>5) Запустите программу и проанализируйте отличия.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2. <a target="_blank" href="lessons/Lesson_4_2/Lesson_4_2.mp4">Блок finally</a>
+            <a class="source" href="files/sources/Lesson_4_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Дополните программу из предыдущего упражнения блоком finally.</p>
+                <p>2) В блоке finally выведите в консоль сообщение: «Завершение программы».</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3. <a target="_blank" href="lessons/Lesson_4_3/Lesson_4_3.mp4">Генерация исключений</a>
+            <a class="source" href="files/sources/Lesson_4_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Попросите пользователя ввести число, используя JOptionPane.</p>
+                <p>2) Если пользователь ввёл число, то выведите в JOptionPane сообщение: «Спасибо!».</p>
+                <p>3) Если пользователь ничего не ввёл, либо ввёл не число, то выбросить исключение, в catch-блоке которого через JOptionPane вывести сообщение: «Некорректный ввод».</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4. <a target="_blank" href="lessons/Lesson_4_4/Lesson_4_4.mp4">Обработка нескольких исключений</a>
+            <a class="source" href="files/sources/Lesson_4_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте массив целых чисел из 5-ти элементов.</p>
+                <p>2) Используя JOptionPane, попросите указать пользователя индекс элемента, который он хочет посмотреть.</p>
+                <p>3) Если пользователь указывает индекс отрицательный, то сгенерируйте исключение и обработайте его.</p>
+                <p>4) Если пользователь ввёл некорректный индекс, то Java автоматически выбросит исключение, которое Вам так же нужно перехватить и обработать.</p>
+                <p>5) Если пользователь ввёл корректный индекс, то в JOptionPane вывести соответствующий этому индексу элемент массива.</p>
+                <p><b>Примечание</b>: В качестве обработки исключения выводите соответствующее сообщение в JOptionPane.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 5. <a target="_blank" href="lessons/Lesson_4_5/Lesson_4_5.mp4">Пользовательские исключения</a>
+            <a class="source" href="files/sources/Lesson_4_5.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте 2 класса-наследника от Exception: NullException и NoNumberException.</p>
+                <p>2) В классе NullException реализуйте метод toString(), в котором верните строку: «Вы ничего не ввели».</p>
+                <p>3) В классе NoNumberException реализуйте метод toString(), в котором верните строку: «Вы ввели не число».</p>
+                <p>4) Доработайте программу из упражнения к уроку «Генерация исключений», чтобы в зависимости от ошибки выбрасывалось соответствующее исключение.</p>
+                <p>5) В блоке catch выведите в JOptionPane сам объект исключения.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section5.png" alt="">
+        <p class="section__number">Раздел 5.</p>
+        <p class="section__name">Основные классы в Java</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1. <a target="_blank" href="lessons/Lesson_5_1/Lesson_5_1.mp4">Класс String</a>
+            <a class="source" href="files/sources/Lesson_5_1.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Попросите пользователя ввести строку.</p>
+                <p>2) Выведите в консоли следующие данные: строку от пользователя в верхнем регистре, в нижнем регистре, подстроку от 2-го символа до 5-го включительно (2-й символ по счёту, а индекс у него будет 1, что надо учесть), результат поиска вхождения в строке строки «hello».</p>
+                <p><b>Примечание</b>: Обработайте все исключительные ситуации с использованием try-catch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2. <a target="_blank" href="lessons/Lesson_5_2/Lesson_5_2.mp4">Класс Math</a>
+            <a class="source" href="files/sources/Lesson_5_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Попросите пользователя, используя JOptionPane, ввести радиус окружности.</p>
+                <p>2) Выведите через JOptionPane площадь окружности (площадь считается по формуле: S = π * ).</p>
+                <p>3) Задайте переменную double со значением сумму на счёте. Например, 9895.</p>
+                <p>4) Задайтесь процентной годовой ставкой типа double, например, 5.7%.</p>
+                <p>5) Вычислите прибыль по вкладу в течение года и выведите её в консоль, округлив до 2-х значащих цифр после запятой.</p>
+                <p><b>Примечание</b>: Прибыль считается так: прибыль = сумма * процент / 100.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3. <a target="_blank" href="lessons/Lesson_5_3/Lesson_5_3.mp4">Класс HashMap</a>
+            <a class="source" href="files/sources/Lesson_5_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте HashMap&lt;String, Integer&gt;, где ключом будет являться имя человека, а значением – его возраст.</p>
+                <p>2) Добавьте в HashMap несколько элементов и выведите их.</p>
+                <p>3) Увеличьте возраст на 4 у второго человека в HashMap (используя метод get(), разумеется, а не просто заменив начальное значение).</p>
+                <p>4) Выведите повторно все элементы HashMap и убедитесь, что возраст действительно изменился на 4 у второго человека.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4. <a target="_blank" href="lessons/Lesson_5_4/Lesson_5_4.mp4">Класс ArrayList</a>
+            <a class="source" href="files/sources/Lesson_5_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте объект класса ArrayList&lt;String&gt;, в котором будут находиться логины пользователей.</p>
+                <p>2) Добавьте несколько элементов в ArrayList.</p>
+                <p>3) Выведите весь ArrayList, используя цикл.</p>
+                <p>4) Замените второй элемент по счёту на другой.</p>
+                <p>5) Выведите весь ArrayList, используя лямбда-выражения.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 5. <a target="_blank" href="lessons/Lesson_5_5/Lesson_5_5.mp4">Классы для работы с датой и временем</a>
+            <br>
+            <a class="source source--big" href="files/sources/Lesson_5_5.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте объект класса Date.</p>
+                <p>2) Создайте переменную подходящего типа, в которую поместите количество миллисекунд, прошедших с 01.01.1970 00:00:00.</p>
+                <p>3) Выведите в консоль эту переменную.</p>
+                <p>4) Используя JOptionPane, попросите пользователя ввести дату в заданном формате.</p>
+                <p>5) Превратите строку, введённую пользователем, в объект Date.</p>
+                <p>6) Увеличьте год на единицу.</p>
+                <p>7) Выведите в JOptionPane получившуюся дату в формате: dd.MM.YYYY.</p>
+                <p><b>Примечание</b>: Не забудьте обработать исключительные ситуации, когда пользователь ничего не вводит или вводит неправильный формат. В качестве обработки выводите информацию об ошибке в JOptionPane и завершайте программу.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 6. <a target="_blank" href="lessons/Lesson_5_6/Lesson_5_6.mp4">Другие классы</a>
+            <a class="source" href="files/sources/Lesson_5_6.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Научитесь работать со справочником.</p>
+                <p>2) Изучите по справочнику два класса: Number и его дочерний класс Integer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section6.png" alt="">
+        <p class="section__number">Раздел 6.</p>
+        <p class="section__name">Создание пользовательского интерфейса</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1. <a target="_blank" href="lessons/Lesson_6_1/Lesson_6_1.mp4">Основы создания пользовательского интерфейса</a>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2. <a target="_blank" href="lessons/Lesson_6_2/Lesson_6_2.mp4">Вывод окна</a>
+            <a class="source" href="files/sources/Lesson_6_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте объект окна.</p>
+                <p>2) Установите размеры 800 на 600 и позицию с координатами 100 и 200.</p>
+                <p>3) Сделайте так, чтобы пользователь не мог менять размеры окна.</p>
+                <p>4) Сделайте так, чтобы при закрытии окна программа автоматически завершалась.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3. <a target="_blank" href="lessons/Lesson_6_3/Lesson_6_3.mp4">Элементы пользовательского интерфейса</a>
+            <br>
+            <a class="source source--big" href="files/sources/Lesson_6_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте окно с параметрами на своё усмотрение.</p>
+                <p>2) Выведите в окне следующие элементы: метку, текстовое поле, кнопку, чекбокс, радио-кнопку.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4. <a target="_blank" href="lessons/Lesson_6_4/Lesson_6_4.mp4">Компоновка элементов</a>
+            <a class="source" href="files/sources/Lesson_6_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте форму со следующими элементами: текстовое поле с именем и e-mail, 3 чекбокса с текстом: «HTML», «JavaScript» и «PHP» и кнопкой «Подписаться».</p>
+                <p>2) Аккуратно всё выровняйте, используя компоновщики Java.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 5. <a target="_blank" href="lessons/Lesson_6_5/Lesson_6_5.mp4">Обработчики событий</a>
+            <a class="source" href="files/sources/Lesson_6_5.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте 3 кнопки с текстом: «Красный», «Белый» и «Зелёный».</p>
+                <p>2) При клике по кнопке должен меняться цвет окна на соответствующий нажатой кнопке.</p>
+                <p><b>Примечание</b>: В справочнике узнайте, как можно изменить цвет фона у объекта JPanel. В будущих уроках Вы об этом ещё узнаете, но крайне важно уже сейчас научиться самостоятельно работать со справочником.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 6. <a target="_blank" href="lessons/Lesson_6_6/Lesson_6_6.mp4">Работа с меню</a>
+            <a class="source" href="files/sources/Lesson_6_6.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте меню с пунктом «Вид».</p>
+                <p>2) Создайте подменю «Размер окна» в меню «Вид».</p>
+                <p>3) Добавьте пункты «640x480», «800x600» и «1024x768» в подменю «Размер окна».</p>
+                <p>4) При клике по пунктам из подменю «Цвет фона» должен устанавливаться соответствующий размер окна.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 7. <a target="_blank" href="lessons/Lesson_6_7/Lesson_6_7.mp4">Обработка событий мыши</a>
+            <a class="source" href="files/sources/Lesson_6_7.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте пустое окно.</p>
+                <p>2) При клике мышью в произвольной точке окна в этом месте должна появиться кнопка.</p>
+                <p>3) Если кнопок будет уже 10 штук, то должно выводиться сообщение через JOptionPane: «Максимум 10 кнопок!»</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 8. <a target="_blank" href="lessons/Lesson_6_8/Lesson_6_8.mp4">Обработка событий клавиатуры</a>
+            <a class="source" href="files/sources/Lesson_6_8.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте окно с одной кнопкой.</p>
+                <p>2) Обработайте стрелки на клавиатуре так, чтобы кнопка двигалась в сторону соответствующей нажатой клавише.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 9. <a target="_blank" href="lessons/Lesson_6_9/Lesson_6_9.mp4">Создание пользовательского компонента</a>
+            <br>
+            <a class="source source--big" href="files/sources/Lesson_6_9.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте класс компонента текстового поля.</p>
+                <p>2) В конструкторе должна задаваться в текстовом поле строка по умолчанию.</p>
+                <p>3) При клике по полю эта запись должна стираться.</p>
+                <p>4) Если пользователь ничего не ввёл, а фокус с поля был утерян, то должна восстановиться строка по умолчанию.</p>
+                <p><b>Примечание</b>: В HTML подобную функцию делается атрибут placeholder. Суть состоит в том, чтобы в поле сразу написать то, что должен ввести пользователь, например, «Логин». А при клике этот текст должен стираться. Если же пользователь переключился на другое элемент (событие «Потеря фокуса») и при этом ничего не заполнил в поле, то эта надпись, например, «Логин», должна восстановиться.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section7.png" alt="">
+        <p class="section__number">Раздел 7.</p>
+        <p class="section__name">Работа с графикой</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1. <a target="_blank" href="lessons/Lesson_7_1/Lesson_7_1.mp4">Основы рисования в Java</a>
+            <a class="source" href="files/sources/Lesson_7_1.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте окно, в котором выведите прямоугольник с параметрами, полученными от пользователя с помощью JOptionPane.</p>
+                <p>2) Обработайте все исключительные ситуации по некорректному вводу данных, выводя в консоли сообщения об ошибках.</p>
+                <p><b>Примечание</b>: JOptionPane надо будет вызвать 4 раза: для координаты X, Y, ширины и высоты прямоугольника. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2. <a target="_blank" href="lessons/Lesson_7_2/Lesson_7_2.mp4">Рисование фигур</a>
+            <a class="source" href="files/sources/Lesson_7_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Нарисуйте в окне человечка: голову, туловище, руки, ноги, глаза нос, рот, уши.</p>
+                <p>2) С помощью цикла и случайных чисел нарисуйте штук 50 веснушек на щёках.</p>
+                <p><b>Примечание</b>: Веснушки должны быть только в конкретной области: на щёках.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3. <a target="_blank" href="lessons/Lesson_7_3/Lesson_7_3.mp4">Анимация</a>
+            <a class="source" href="files/sources/Lesson_7_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Сделайте бесконечную анимацию человечка из предыдущего упражнения: он должен двигаться слева направо, а когда достигнет правого края, должен начать двигаться справа налево, и так до закрытия окна.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4. <a target="_blank" href="lessons/Lesson_7_4/Lesson_7_4.mp4">Вывод изображения из файла</a>
+            <a class="source" href="files/sources/Lesson_7_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте форму с текстовым полем для URL-адреса и кнопкой «Вывести».</p>
+                <p>2) После клика по кнопке выведите изображение из URL, введённого пользователем, рядом с формой.</p>
+                <p>3) Обработайте все исключительные ситуации: пользователь ничего не ввёл, URL не существует, URL ведёт не на изображение.</p>
+                <p><b>Примечание</b>: В качестве обработки исключений подойдёт вывод в JOptionPane соответствующих сообщений.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 5. <a target="_blank" href="lessons/Lesson_7_5/Lesson_7_5.mp4">Рисование компонента</a>
+            <a class="source" href="files/sources/Lesson_7_5.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте свою собственную кнопку.</p>
+                <p>2) Кнопка должна иметь форму окружности: заливка красная, а контур чёрный.</p>
+                <p>3) Размер окружности должен определяться текстом на ней.</p>
+                <p>4) При наведении курсора мыши цвет заливки окружности должен измениться на жёлтый.</p>
+                <p>5) При отводе курсора мыши цвет заливки окружности должен вернуться обратной на красный.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section8.png" alt="">
+        <p class="section__number">Раздел 8.</p>
+        <p class="section__name">Работа с внешними ресурсами</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1. <a target="_blank" href="lessons/Lesson_8_1/Lesson_8_1.mp4">Получение информации о файле</a>
+            <a class="source" href="files/sources/Lesson_8_1.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Через JOptionPane попросите пользователя указать путь к директории.</p>
+                <p>2) Выведите размер этой директории через JOptionPane.</p>
+                <p><b>Примечание</b>: Поскольку язык Java способен определить только размер файла, то Вам придётся использовать рекурсию, каждый раз проверяя: каталог передан или файл. Если файл, то возвращается его размер, а если каталог, то он передаётся в качестве параметра на вызов этого же метода.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2. <a target="_blank" href="lessons/Lesson_8_2/Lesson_8_2.mp4">Чтение из файла</a>
+            <a class="source" href="files/sources/Lesson_8_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте текстовый файл с произвольным текстом.</p>
+                <p>2) Создайте окно с параметрами на своё усмотрение.</p>
+                <p>3) Выведите текст из файла в это окно.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3. <a target="_blank" href="lessons/Lesson_8_3/Lesson_8_3.mp4">Запись в файл</a>
+            <a class="source" href="files/sources/Lesson_8_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Создайте форму с текстовой областью и кнопкой «Записать в файл».</p>
+                <p>2) При клике по кнопке весь текст из текстовой области должен быть записан в файл.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4. <a target="_blank" href="lessons/Lesson_8_4/Lesson_8_4.mp4">Загрузка данных с внешней Web-страницы</a>
+            <br>
+            <a class="source source--big" href="files/sources/Lesson_8_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Попросите пользователя указать URL Web-страницы через JOptionPane.</p>
+                <p>2) Выведите весь текст из Web-страницы в окно.</p>
+                <p>3) Добавьте кнопку «Сохранить».</p>
+                <p>4) Когда пользователь жмёт кнопку «Сохранить», необходимо записать весь скачанный текст в файл, причём имя должно соответствовать Web-странице. Например, если URL заканчивается на page.html?a=5&amp;b=7, значит, имя файла должно быть page.html.</p>
+                <p><b>Примечание</b>: Если имени файла нет или это главная страница, то файл должен называться index.html.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <img src="img/section9.png" alt="">
+        <p class="section__number">Раздел 9.</p>
+        <p class="section__name">Многопоточное программирование</p>
+        <div class="section__lesson">
+          <div>
+            Урок 1. <a target="_blank" href="lessons/Lesson_9_1/Lesson_9_1.mp4">Основы многопоточного программирования</a>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 2. <a target="_blank" href="lessons/Lesson_9_2/Lesson_9_2.mp4">Создание потока</a>
+            <a class="source" href="files/sources/Lesson_9_2.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Вычислите сумму чисел от 1 до 100000000.</p>
+                <p>2) Скопируйте код вычисления ещё 2 раза.</p>
+                <p>3) Определите время выполнения циклов с помощью System.currentTimeMillis().</p>
+                <p>4) Сделайте 2 дополнительных потока, в каждом из которых будет выполняться тот же цикл.</p>
+                <p>5) Один из потоков сделайте с помощью лямбда-выражения.</p>
+                <p>6) В основном потоке закомментируйте 2 цикла, чтобы остался только один. Таким образом, каждый из 3-х циклов будет выполняться в своём потоке.</p>
+                <p>7) Определите время выполнения в этом случае.</p>
+                <p><b>Примечание</b>: Метод System.currentTimeMillis() посмотрите по справочнику, либо во всплывающей подсказке NetBeans. Целью данного задания так же является поиск решения того, как можно определить время выполнения определённого блока кода с использованием этого метода.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 3. <a target="_blank" href="lessons/Lesson_9_3/Lesson_9_3.mp4">Работа с потоками и их синхронизация</a>
+            <br>
+            <a class="source source--big" href="files/sources/Lesson_9_3.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Добавьте вывод суммы чисел из предыдущего упражнения в консоль у каждого потока.</p>
+                <p>2) Задайте различные приоритеты каждому потоку.</p>
+                <p>3) Проанализируйте время выполнения каждого потока в зависимости от приоритета.</p>
+				<p>4) Создайте класс, конструктор которого будет в качестве параметра принимать объект File.</p>
+                <p>5) Добавьте метод, который будет считывать текст из файла и возвращать готовую строку.</p>
+                <p>6) Добавьте метод, который будет записывать в файл переданную в параметрах строку.</p>
+                <p>7) Создайте 2 потока, которые должны будут одновременно записывать в файл, используя экземпляр созданного Вами класса, некоторую строку (каждый из потоков должен попытаться записать свою строку), а после выводить в консоль результат их записи.</p>
+                <p>8) Добейтесь того, чтобы произошла ошибка. Например, поток записал «Строка 1», а в консоле в этом потоке вывелось «Строка 2» из-за того, что в этот самый момент другой поток записал в файл «Строка 2».</p>
+                <p>9) Синхронизируйте потоки, чтобы этой ошибки больше не было.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 4. <a target="_blank" href="lessons/Lesson_9_4/Lesson_9_4.mp4">Демон-потоки</a>
+            <a class="source" href="files/sources/Lesson_9_4.zip">Исходники</a>
+            <div class="section__homework-block">
+              <a class="practice" href="#">Упражнения</a>
+              <div class="section__homework">
+                <p>1) Сделайте у одного из 3-х потоков низкий приоритет.</p>
+                <p>2) Сделайте его демон-потоком.</p>
+                <p>3) Убедитесь, что этот поток не успел завершить свою работу до завершения программы.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            Урок 5. <a target="_blank" href="lessons/Lesson_9_5/Lesson_9_5.mp4">Заключение</a>
+          </div>
+        </div>
+      </div>
+      <div class="content__section section">
+        <p class="section__name">Дополнительная информация</p>
+        <div class="section__lesson">
+          <div>
+            1. <a href="files/netbeans.exe">Среда разработки</a>
+          </div>
+        </div>
+        <div class="section__lesson">
+          <div>
+            2. <a target="_blank" href="https://docs.oracle.com">Справочник Java</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content__bonus">
+      <div class="wrap">
+        <div class="content__section section">
+          <p class="section__number">Бонус 1.</p>
+          <p class="section__name">Паттерны проектирования</p>
+          <img src="img/bonus1.png" alt="">
+          <div class="section__lesson">
+            <div>
+              Урок 1.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_1/Bonus_1_1.mp4">Что такое паттерн проектирования?</a>
+              &nbsp;&nbsp;
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 2.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_2/Bonus_1_2.mp4">Singleton</a>
+              <a class="source" href="files/sources/Bonus_1_2.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 3.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_3/Bonus_1_3.mp4">Prototype</a>
+              <a class="source" href="files/sources/Bonus_1_3.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 4.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_4/Bonus_1_4.mp4">Builder</a>
+              <a class="source" href="files/sources/Bonus_1_4.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 5.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_5/Bonus_1_5.mp4">Adapter</a>
+              <a class="source" href="files/sources/Bonus_1_5.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 6.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_6/Bonus_1_6.mp4">Bridge</a>
+              <a class="source" href="files/sources/Bonus_1_6.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 7.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_7/Bonus_1_7.mp4">Facade</a>
+              <a class="source" href="files/sources/Bonus_1_7.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 8.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_8/Bonus_1_8.mp4">Mediator</a>
+              <a class="source" href="files/sources/Bonus_1_8.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 9.&nbsp;&nbsp; <a target="_blank" href="lessons/Bonus_1_9/Bonus_1_9.mp4">Observer</a>
+              <a class="source" href="files/sources/Bonus_1_9.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 10. <a target="_blank" href="lessons/Bonus_1_10/Bonus_1_10.mp4">Strategy</a>
+              <a class="source" href="files/sources/Bonus_1_10.zip">Исходники</a>
+            </div>
+          </div>
+        </div>
+        <div class="content__section section">
+          <p class="section__number">Бонус 2.</p>
+          <p class="section__name">Калькулятор на Java</p>
+          <img src="img/bonus2.png" alt="">
+          <div class="section__lesson">
+            <div>
+              Урок 1. <a target="_blank" href="lessons/Bonus_2_1/Bonus_2_1.mp4">Создание фрейма</a>
+              <a class="source" href="files/sources/Bonus_2_1.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 2. <a target="_blank" href="lessons/Bonus_2_2/Bonus_2_2.mp4">Создание панели</a>
+              <a class="source" href="files/sources/Bonus_2_2.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 3. <a target="_blank" href="lessons/Bonus_2_3/Bonus_2_3.mp4">Добавление обработчиков событий</a>
+              <a class="source" href="files/sources/Bonus_2_3.zip">Исходники</a>
+            </div>
+          </div>
+        </div>
+        <div class="content__section section">
+          <p class="section__number">Бонус 3.</p>
+          <p class="section__name">Парсер курсов валют</p>
+          <img src="img/bonus3.png" alt="">
+          <div class="section__lesson">
+            <div>
+              Урок 1. <a target="_blank" href="lessons/Bonus_3_1/Bonus_3_1.mp4">Получение XML-файла с курсом валют</a>
+              <a class="source" href="files/sources/Bonus_3_1.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 2. <a target="_blank" href="lessons/Bonus_3_2/Bonus_3_2.mp4">Получение данных из XML-файла</a>
+              <a class="source" href="files/sources/Bonus_3_2.zip">Исходники</a>
+            </div>
+          </div>
+          <div class="section__lesson">
+            <div>
+              Урок 3. <a target="_blank" href="lessons/Bonus_3_3/Bonus_3_3.mp4">Создание GUI и вывод данных</a>
+              <a class="source" href="files/sources/Bonus_3_3.zip">Исходники</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <p class="title">Если Вы хотите заняться созданием сайтов, то рекомендую следующие курсы:</p>
+  <div class="course course--two-block">
+				<div class="course__element">
+		<p class="course__title">Система "Вёрстка сайта с нуля 2.0"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course2.png" alt="Система &quot;Вёрстка сайта с нуля 2.0&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>54 урока</p>
+				</div>
+				<div class="course__time">
+					<p>12 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Этот курс обучит Вас абсолютно с нуля HTML5 и CSS3, а также научит верстать сайты с помощью реальных примеров вёрстки. Обучение идёт от простого к сложному. В последнем разделе курса идёт обучение адаптивной вёрстке сайтов: Вы узнаете всю необходимую теорию, а также увидите пример реальной адаптивной вёрстки сайта.</p>
+							<p class="course__price">Цена курса: <span>3970 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=33">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/makeup2">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Система "Своя Web-студия за 55 дней"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course6.png" alt="Система &quot;Своя Web-студия за 55 дней&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>39 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>9 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Обучение построено на теории, плюс практике, то есть я прямо на Ваших глазах буду абсолютно с нуля открывать свою Web-студию, нанимать специалистов, принимать и выполнять заказы. Это настоящее реалити-шоу. Просто повторяя все шаги за мной, Вы на выходе получите свою полноценную Web-студию с постоянным потоком клиентов.</p>
+							<p class="course__price">Цена курса: <span>14970 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=32">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/web55">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "PHP и MySQL с Нуля до Гуру 2.0"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course3.png" alt="Видеокурс &quot;PHP и MySQL с Нуля до Гуру 2.0&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>120 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>25 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Данный курс научит Вас программировать на самом популярном Web-языке в мире - PHP. Курс состоит из 11 разделов, в которых с нуля рассказывается и показывается процесс написания различных скриптов на PHP.</p>
+							<p class="course__price">Цена курса: <span>4970 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=31">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/php7">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Joomla 3 с Нуля до Гуру"</p>
+		<p class="course__author">Автор: Олег Касьянов</p>
+		<div class="course__img">
+			<img src="img/course7.png" alt="Видеокурс &quot;Joomla 3 с Нуля до Гуру&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>71 урок</p>
+				</div>
+				<div class="course__time">
+					<p>10 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс поможет Вам повысить свой уровень в веб-разработке и научит создавать удобные и эффективные сайты на Joomla 3. Курс подходит как для опытных вебмастеров, так и для новичков, кто ещё только начинает.</p>
+							<p class="course__price">Цена курса: <span>3990 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=29">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/joomla">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "React JS, Redux, ES2015 с Нуля до Гуру"</p>
+		<p class="course__author">Автор: Владилен Минин</p>
+		<div class="course__img">
+			<img src="img/course8.png" alt="Видеокурс &quot;React JS, Redux, ES2015 с Нуля до Гуру&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>57 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>11 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Данный курс - это обширный курс по JavaScript и фреймворку React, который позволит Вам с нуля создавать мощные современные, динамические JavaScript-приложения.</p>
+							<p class="course__price">Цена курса: <span>3970 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=28">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/reactjs">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Создание и продвижение лендинга под ключ"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course9.png" alt="Видеокурс &quot;Создание и продвижение лендинга под ключ&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>56 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>14 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "Создание и продвижение лендинга под ключ" научит Вас создавать профессиональные лендинги на любую тематику с нуля и под ключ.</p>
+							<p class="course__price">Цена курса: <span>7700 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=26">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/landing">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+	<div class="course course--two-block">
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Создание Интернет-магазина на OpenCart 2.0"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course10.png" alt="Видеокурс &quot;Создание Интернет-магазина на OpenCart 2.0&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>66 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>6 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "Создание Интернет-магазина на OpenCart 2.0" обучит Вас созданию любых Интернет-магазинов на OpenCart 2. В первом разделе курса разбираются абсолютно все возможности данного движка с примерами.</p>
+							<p class="course__price">Цена курса: <span>4700 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=25">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/im2">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Фреймворк Yii 2.0 с нуля. Пример создания сайта"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course11.png" alt="Видеокурс &quot;Фреймворк Yii 2.0 с нуля. Пример создания сайта&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>28 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>6 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "Фреймворк Yii 2.0 с нуля. Пример создания сайта" обучит Вас созданию профессиональных сайтов с использованием фреймворка Yii. В курсе есть 2 раздела: теоретический и практический.</p>
+							<p class="course__price">Цена курса: <span>3700 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=24">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/yii">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Коллекция VIP-видеоуроков</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course1.png" alt="Коллекция VIP-видеоуроков" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>10 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>3 часа видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Данный комплект содержит много VIP уроков на разные темы.</p>
+							<p class="course__price">Цена курса: <span>970 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=23">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/vip10">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Заработок на создании сайтов под заказ"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course12.png" alt="Видеокурс &quot;Заработок на создании сайтов под заказ&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>13 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>2 часа видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Этот видеокурс - это то, что может полностью изменить Вашу жизнь в лучшую сторону. В этом курсе Вы узнаете все мои секреты успешного заработка на создании сайтов под заказ.</p>
+							<p class="course__price">Цена курса: <span>7700 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=10">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/fl">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "WordPress 4. Пример создания блога"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course13.png" alt="Видеокурс &quot;WordPress 4. Пример создания блога&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>34 урока</p>
+				</div>
+				<div class="course__time">
+					<p>5 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "WordPress 4. Пример создания блога" научит Вас создавать любые сайты на самой популярной CMS - WordPress.</p>
+							<p class="course__price">Цена курса: <span>2970 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=9">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/wp">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Создание движка на PHP и MySQL 2.0"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course14.png" alt="Видеокурс &quot;Создание движка на PHP и MySQL 2.0&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>99 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>17 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "Создание движка на PHP и MySQL 2.0" научит Вас создавать профессиональные движки для сайтов на PHP и MySQL с использованием ООП и паттерна MVC.</p>
+							<p class="course__price">Цена курса: <span>4700 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=8">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/php2">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "HTML5 и CSS3 с Нуля до Гуру"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course15.png" alt="Видеокурс &quot;HTML5 и CSS3 с Нуля до Гуру&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>48 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>8 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "HTML5 и CSS3 с Нуля до Гуру" научит Вас создавать сайты с использованием HTML5 и CSS3. Из курса Вы узнаете, что нового появилось в этих Web-технологиях с разбором множества примеров.</p>
+							<p class="course__price">Цена курса: <span>4700 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=7">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/html5">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "JavaScript, jQuery и Ajax с Нуля до Гуру"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course4.png" alt="Видеокурс &quot;JavaScript, jQuery и Ajax с Нуля до Гуру&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>56 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>7 часов видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "JavaScript, jQuery и Ajax с Нуля до Гуру" научит Вас "вдыхать жизнь" в страницы, делая их с потрясающими эффектами и максимальным удобством для пользователя.</p>
+							<p class="course__price">Цена курса: <span>3490 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=5">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/javascript">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Создание Интернет-магазина на PHP и MySQL"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course5.png" alt="Видеокурс &quot;Создание Интернет-магазина на PHP и MySQL&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>89 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>22 часа видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "Создание Интернет-магазина на PHP и MySQL" - это уникальный курс по созданию Интернет-магазина с нуля. Особенностью данного курса является то, что создание идёт с самого начала, то есть от идеи, и до размещения в Интернете.</p>
+							<p class="course__price">Цена курса: <span>4900 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=4">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/im">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">Видеокурс "Создание и Раскрутка сайта от А до Я"</p>
+		<p class="course__author">Автор: Михаил Русаков</p>
+		<div class="course__img">
+			<img src="img/course16.png" alt="Видеокурс &quot;Создание и Раскрутка сайта от А до Я&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>246 уроков</p>
+				</div>
+				<div class="course__time">
+					<p>54 часа видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">Видеокурс "Создание и Раскрутка сайта от А до Я" - это 246 видеоуроков общей продолжительностью более 50-ти часов по теме создания, размещения в Интернете и раскрутке сайта. В качестве раскручиваемого сайта был выбран <b>MyRusakov.ru</b>.</p>
+							<p class="course__price">Цена курса: <span>2490 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=1">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/kurs">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+				<div class="course__element">
+		<p class="course__title">"Фреймворк Bootstrap: практика адаптивной верстки от А до Я"</p>
+		<p class="course__author">Автор: Андрей Кудлай</p>
+		<div class="course__img">
+			<img src="img/course17.png" alt="&quot;Фреймворк Bootstrap: практика адаптивной верстки от А до Я&quot;" style="width: 100%;">
+		</div>
+		<div class="course__txt">
+			<div class="course__icons">
+				<div class="course__lesson">
+					<p>91 урок</p>
+				</div>
+				<div class="course__time">
+					<p>23 часа видео</p>
+				</div>
+			</div>
+			<p class="course__excerpt">В этом курсе Вы увидите всю необходимую теорию и практику вёрстки с помощью Bootstrap. Bootstrap - это фреймворк, который позволяет верстать сайты значительно легче и быстрее, также он практически всегда необходим при трудоустройстве.</p>
+							<p class="course__price">Цена курса: <span>5970 ₽</span></p>
+								<div class="course__buttons">
+					<a target="_blank" class="course__order order" href="https://srs.myrusakov.ru/order?product_ids=27">Заказать</a>
+					<a target="_blank" class="course__info info" href="https://srs.myrusakov.ru/bootstrap">Подробнее о курсе</a>
+				</div>
+					</div>
+	</div>
+	</div>
+	</div>
+  </div>
+
+  <div class="footer">
+    <footer>
+      <div class="wrap">
+        <img src="img/footer-logo.png" alt=""/>
+        <div class="footer__menu">
+          <a href="https://blog.myrusakov.ru/author.html">Об авторе</a>
+          <a href="https://blog.myrusakov.ru/courses.html">Видеокурсы</a>
+          <a href="https://vk.com/rusakovmy">Отзывы</a>
+          <a href="https://myrusakov.ru/">Мой сайт</a>
+          <a href="https://blog.myrusakov.ru/subscribe.html">Выпуски рассылки</a>
+          <a href="https://blog.myrusakov.ru/sites.html">Сайты учеников</a>
+        </div>
+        <p class="footer__copy">© MyRusakov.ru</p>
+        <p class="footer__copy">ВСЕ ПРАВА ЗАЩИЩЕНЫ.</p>
+      </div>
+    </footer>
+  </div>
+</div>
+</body>
+</html>
